@@ -3,10 +3,15 @@
     <div class="modal-content">  
       <span class="close" v-on:click="this.closeModal()">&times;</span>
       <div class="sub-content">
-        <h1 class="pname">{{pokemon.name}}</h1>
-        <p>Name: {{pokemon.name}}</p>
-        <p>Name: {{pokemon.name}}</p>
-        <p>Name: {{pokemon.name}}</p>
+        <h1 class="pname">{{currentpokemon.name}}</h1>
+        <img :src="currentpokemon.sprites.front_default">
+        <p>Height: {{(currentpokemon.height)*10}} cm</p>
+        <p>Weight: {{(currentpokemon.weight)/10}} kg</p>
+        <p>Type:
+          <span v-for="ptype in currentpokemon.types" v-bind:key="ptype">
+            <span class="type">{{ptype.type.name}}</span> 
+          </span>
+        </p>
       </div>
     </div>
   </div>
@@ -20,7 +25,8 @@ export default {
   },
   data() {
     return {
-      showModal: false
+      showModal: false,
+      currentpokemon: this.pokemon
     }
   },
   mounted() {
@@ -73,6 +79,9 @@ export default {
         margin: 3rem;
         .pname {
           text-transform: capitalize;
+        }
+        .type {
+          padding-right: 5px;
         }
       }
     }

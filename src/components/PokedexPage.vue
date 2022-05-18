@@ -2,7 +2,7 @@
   <div class="main">
     <h1 class="title">Pokedex</h1>
     <div class="list-section">
-        <div class="pitem" v-for="pokemon in pokemonList.results" v-bind:key="pokemon">
+        <div class="pitem" v-for="pokemon in pokemonList.results" :key="pokemon">
         <div class="pname" v-on:click="getPokemon(pokemon.url)">
           {{pokemon.name}}
         </div>
@@ -76,7 +76,6 @@ export default {
       this.first -= this.unit;
     },
     next() {
-      console.log('next page', this.first)
       this.first += this.unit;
     },
   },
@@ -88,7 +87,6 @@ export default {
       this.getPokemonList()
     },
     unit() {
-      console.log('set unit to', this.unit)
       this.number = this.unit
       this.getPokemonList()
     }
