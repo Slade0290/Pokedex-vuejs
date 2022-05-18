@@ -152,11 +152,5 @@ $pblue: rgb(60, 90, 166);
       background: rgba(0,250,50,0.8);
     }
   }
-  .prev {
-
-  }
-  .next {
-
-  }
 }
 </style>
