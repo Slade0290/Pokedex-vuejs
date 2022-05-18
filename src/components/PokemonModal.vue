@@ -61,7 +61,8 @@ export default {
       padding: 20px;
       border: 1px solid #888;
       box-shadow: .2rem .2rem .5rem .1rem rgba(25,25,25,0.8);
-      width: 80%;
+      width: 15%;
+      min-width: 15rem;
       .close {
         color: #aaa;
         float: right;
