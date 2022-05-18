@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <PokedexPage />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PokedexPage from './components/PokedexPage.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    PokedexPage
   }
 }
 </script>
@@ -21,6 +20,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
